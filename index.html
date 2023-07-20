@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+    <style>
+      h2 {
+        text-align: center;
+      }
+
+      .row {
+        display: grid;
+        grid-template-columns: auto auto auto;
+      }
+
+      .row .col-md-4,
+      .row .col-md-5,
+      .row .col-md-6 {
+        border: 2px solid black;
+        padding: 10px;
+        margin: 10px;
+        background-color: gray;
+        font-size: 18px;
+        position: relative;
+      }
+
+      h3 {
+        position: absolute;
+        background-color: pink;
+        border: 2px solid black;
+        width: 150px;
+        text-align: center;
+        top: -22px;
+        right: 0;
+      }
+
+      .col-md-5 h3 {
+        background-color: brown;
+      }
+
+      .col-md-6 h3 {
+        background-color: cornsilk;
+      }
+
+      @media screen and (max-width: 991px) {
+        .col-md-6 {
+          grid-column: 1 / span 2;
+          background-color: cadetblue;
+        }
+
+        .col-md-4,
+        .col-md-5,
+        .col-md-6 {
+          background: linear-gradient(gray, pink);
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        .col-md-4,
+        .col-md-5,
+        .col-md-6 {
+          grid-column: 1;
+          background: radial-gradient(white, cadetblue);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Our Menu</h2>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro
+            quaerat maiores, consectetur expedita, corporis fugiat repellendus
+            neque, delectus nesciunt dolorum suscipit molestiae facere
+            necessitatibus nisi ab. Nisi asperiores eveniet saepe.
+          </p>
+          <h3>Chicken</h3>
+        </div>
+        <div class="col-md-5">
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro
+            quaerat maiores, consectetur expedita, corporis fugiat repellendus
+            neque, delectus nesciunt dolorum suscipit molestiae facere
+            necessitatibus nisi ab. Nisi asperiores eveniet saepe.
+          </p>
+          <h3>Beef</h3>
+        </div>
+        <div class="col-md-6">
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro
+            quaerat maiores, consectetur expedita, corporis fugiat repellendus
+            neque, delectus nesciunt dolorum suscipit molestiae facere
+            necessitatibus nisi ab. Nisi asperiores eveniet saepe.
+          </p>
+          <h3>Sushi</h3>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
